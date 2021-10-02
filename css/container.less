@@ -1,0 +1,108 @@
+body{
+    margin:0;
+    padding: 0;
+    font-size: @BodyFontSize;
+    font-family: 'Noto Sans';
+    background: @BodyColor;
+
+    .search-bar{
+        background-color: transparent;
+        margin: 10px 0px 48px 0px;
+        .title{
+            font-weight: 700;
+            font-size: @Display1FontSize;
+            span{
+                color: @PrimaryColor;
+                }
+        }
+        #search-form{
+            display: flex;
+            background: @ContentColor;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 32px;
+            .btn-group{
+                min-width: 170px;
+                text-align: left;
+                margin-right: 20px;
+                button{
+                    outline:none;
+                    color: @PrimaryColor;
+                    box-shadow: none;
+                    &:after{
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid @PrimaryColor;
+                        transform: rotate(
+                    45deg);
+                        border-top: 0px;
+                        border-left: 0px;
+                        }
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            right: 0px;
+                            top: 10px;
+                            height: 25px;
+                            width: 1px;
+                            border: 0;
+                            background-color: @PrimaryColor;
+                            opacity: 0.2;
+                        }
+                }
+                .dropdown-menu{
+                    padding: 10px;
+                    a{
+                        color: @PrimaryColor;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .input-group{
+                .input-group-btn{
+                    button{
+                        background-color: @PrimaryColor;
+                        height: 48px;
+                        width: 129px;
+                        outline:none;
+                        border-radius: 10px;
+                        font-size: @HeaderFontSize;
+                    }
+                }
+                input{
+                    height: 48px;
+                    border: 0px;
+                    &:focus{
+                        outline:none;
+
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    nav .pagination {
+        justify-content: center;
+        width: 100%;
+        .page-item{
+            margin: 0px 3px;
+            .page-link{
+                padding: .4rem .65rem;
+                border:none;
+                border-radius: 3px;
+                color: @PrimaryColor;
+            }
+            &.active{
+                .page-link{
+                    color: @ContentColor;
+                }
+            }
+        }
+    }
+}
+@import 'pages/home';

@@ -1,0 +1,142 @@
+#home-page{
+    .panel{
+        border: 1px solid rgba(61, 86, 178, 0.5);
+        border-radius: 10px;
+        padding: @GeneralPaddingWidth;
+        background-color: @ContentColor;
+        margin-bottom: 24px;
+        h4{
+            color: @PrimaryColor;
+            margin-bottom: 24px;
+        }
+        .organisation-list, .expert-list, .technology-list{
+            min-height: 384px;
+            margin-bottom: 32px;
+            position: relative;
+            &:after{
+                position: absolute;
+                width: 100%;
+                content: "";
+                height: 1px;
+                background-color: @ContentColor;
+                bottom:0;
+                left: 0;
+            }
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        .organisation-item{
+            display: flex;
+            text-align: left;
+            align-items: center;
+            padding: 8px 0px;
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                width: calc(~'100% - 83px');
+                left: 83px;
+                bottom: 0px;
+                height: 1px;
+                background-color: @PrimaryColor;
+                opacity: 0.2;
+            }
+            .img{
+                width: 64px;
+                height: 64px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                background: @ContentColor;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                img{
+                    max-width: 45px;
+                    max-height: 45px;
+                }
+            }
+            .info{
+                padding: 0px 19px;
+                position: relative;
+                width: calc(~'100% - 64px');
+                box-sizing: border-box;
+
+                h6{
+                    font-size: @BodyFontSize;
+                    color: #2E2E2E;
+                    margin-bottom: 3px;
+                    font-weight: 500;
+                    &:hover{
+                        color: @PrimaryColor;
+                    }
+                }
+                p{
+                    margin: 0px;
+                    font-size: @CaptionFontSize;
+                    color: #2E2E2E;
+                    max-width: 200px; 
+                    opacity: 0.5;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    white-space: nowrap;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    right: 0px;
+                    top: 40%;
+                    width: 8px;
+                    height: 8px;
+                    border: 2px solid @PrimaryColor;
+                    transform: rotate(45deg);
+                    border-bottom: 0px;
+                    border-left: 0px;
+                }
+            }
+        }
+        .tech-item{
+            display: flex;
+            text-align: left;
+            align-items: center;
+            padding: 8px 0px;
+            position: relative;
+            box-sizing: border-box;
+            height: 48px;
+            border-bottom: 1px solid rgba(61, 86, 178, 0.2);
+            &:after{
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 40%;
+                width: 8px;
+                height: 8px;
+                border: 2px solid @PrimaryColor;
+                transform: rotate(45deg);
+                border-bottom: 0px;
+                border-left: 0px;
+            }
+            .info{
+                padding: 0px 19px 0px 0px;
+                h6{
+                    font-size: @BodyFontSize;
+                    color: #2E2E2E;
+                    margin-bottom: 0px;
+                    font-weight: 500;
+                    &:hover{
+                        color: @PrimaryColor;
+                    }
+                }
+            }
+            }
+        .expert-list .organisation-item .img img{
+            max-width: 64px;
+            max-height: 64px;
+        }
+        .technology-list{
+            padding-top: 16px;
+        }
+    }
+}
